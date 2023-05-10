@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:ignore="MissingDefaultResource"
-    android:background="@color/white">
+    >
+
     <TextView
-        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="THÊM MỚI CÔNG TRÌNH"
-        android:textSize="25dp"
-        android:gravity="center"
+        android:text="Cập nhật công trình"
+        android:textSize="25sp"
         android:fontFamily="@font/sigmar"
-        android:textColor="@color/primary_color"
+        android:gravity="center"
+        android:textColor="#FFD600"
         />
     <TableLayout
         android:layout_width="match_parent"
@@ -39,8 +36,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="Nhà ở, Công viên,..."
-                android:textColor="@color/black"
                 android:textSize="17sp"
+                android:textColor="@color/black"
                 />
         </TableRow>
         <TableRow>
@@ -81,8 +78,44 @@
                 android:textSize="17sp"
                 android:fontFamily="@font/merriweather"/>
         </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nhân sự: "
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:fontFamily="@font/merriweather"/>
+            <EditText
+                android:id="@+id/edtTotalEmplUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:hint="số lượng nhân sự"
+                android:textSize="17sp"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trạng thái: "
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:fontFamily="@font/merriweather"/>
+            <EditText
+                android:id="@+id/edtStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="trạng thái thi công"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                />
+        </TableRow>
     </TableLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -90,19 +123,18 @@
         android:gravity="center"
         android:paddingVertical="25dp"
         >
-
         <Button
-            android:id="@+id/btnAddNew"
+            android:id="@+id/btnUpdate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Thêm"
+            android:text="Cập nhật"
             android:layout_marginRight="40dp"
             android:background="@drawable/bg_button_dialog"
             android:fontFamily="@font/sigmar"
-            android:textColor="#00C853"
+            android:textColor="#FFD600"
             />
         <Button
-            android:id="@+id/btnClose"
+            android:id="@+id/btnCloseUpdate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Đóng"

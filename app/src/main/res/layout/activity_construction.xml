@@ -12,7 +12,6 @@
         android:layout_height="50dp"
         android:orientation="horizontal"
         android:weightSum="10">
-
         <EditText
             android:id="@+id/edtFind"
             android:layout_width="wrap_content"
@@ -24,7 +23,6 @@
             android:textColorHint="#5CFFFFFF"
             android:backgroundTint="@color/white"
             />
-
 <!--        <Button-->
 <!--            android:id="@+id/btnFind"-->
 <!--            android:layout_width="wrap_content"-->
@@ -50,7 +48,6 @@
             android:layout_marginHorizontal="10dp"
             android:layout_weight="1"
             />
-
         <Spinner
             android:id="@+id/spinner"
             android:layout_width="wrap_content"
@@ -60,7 +57,6 @@
             style="@style/mySpinnerItemStyle"
             android:background="@drawable/bg_button_primary"
              />
-
     </LinearLayout>
     <ListView
         android:id="@+id/lvConstruction"

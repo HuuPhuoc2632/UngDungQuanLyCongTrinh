@@ -10,4 +10,8 @@
     <color name="primary_color_blue">#00B8D4</color>
     <color name="primary_color">#010C4C</color>
     <color name="background_color">#040F1C</color>
+    <color name="red_color">#D50000</color>
+    <color name="sub_color">#5A5A5A</color>
+    <color name="success_color">#64DD17</color>
+
 </resources>

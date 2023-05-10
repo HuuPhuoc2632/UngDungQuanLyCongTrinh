@@ -1,57 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
     android:background="@drawable/bg_line_construction"
-    android:padding="10dp"
-    >
+    android:orientation="horizontal"
+    android:padding="10dp">
+
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/layoutParrent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-        <TextView
-            android:id="@+id/tvName"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Name of Construction"
-            android:textSize="20dp"
-            android:textColor="#0623D1"
-            android:paddingRight="40dp"
-            />
-        <TextView
-            android:id="@+id/tvNumEmploy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="EMP: 20"
-            android:textColor="#FFD600"
-            android:textSize="15dp"
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-            <TextView
-                android:id="@+id/tvAddress"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Ho Chi Minh City"
-                android:textSize="15dp"
-                android:textColor="#D50000"
-                android:layout_marginRight="20dp"
-                />
-            <TextView
-                android:id="@+id/tvDateStart"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Start: 30/04/2023"
-                android:textColor="#FFD600"
-                />
+            android:shrinkColumns="1">
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="20dp"
+                    android:text="Name of Construction"
+                    android:textColor="#0623D1"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tvNumEmploy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="EMP: 20"
+                    android:textColor="#FFD600"
+                    android:textSize="15dp" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/tvAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:text="Ho Chi Minh City"
+                    android:textColor="#D50000"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/tvDateStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Start: 30/04/2023"
+                    android:textColor="#FFD600" />
+            </TableRow>
+
+        </TableLayout>
 
     </LinearLayout>
 
-
-</LinearLayout>
+    <ImageView
+        android:id="@+id/imvEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:src="@drawable/ic_edit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/layoutParrent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
